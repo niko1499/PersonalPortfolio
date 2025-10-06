@@ -13,5 +13,10 @@ COUNTRIES = {
     JPN: { fillKey: 'visited' },
     MEX: { fillKey: 'visited' },
     FRA: { fillKey: 'visited' },
+    CAN: { fillKey: 'visited' },
+    BLZ: { fillKey: 'visited' },
+    AUT: { fillKey: 'visited' },
+    MKD: { fillKey: 'visited' },
+
 
 }

@@ -942,6 +942,10 @@ main {
     margin-bottom: 25px;
 }
 
+.seperator {
+    padding-bottom: 20px;
+}
+
 .filter-select {
     background: var(--eerie-black-2);
     color: var(--light-gray);
