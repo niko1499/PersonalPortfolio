@@ -23,6 +23,15 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+
+
+    <script src="jquery.js"></script>
+    <script>
+        $(function() {
+            $("#includedContent").load("header.html");
+        });
+    </script>
 </head>
 
 <body>
@@ -36,8 +45,18 @@
         <!--
       - #SIDEBAR
     -->
+        <html>
 
-        <aside class="sidebar" data-sidebar>
+        <head>
+
+        </head>
+
+        <body>
+            <div id="includedContent"></div>
+        </body>
+
+        </html>
+        <!-- <aside class="sidebar" data-sidebar>
 
             <div class="sidebar-info">
 
@@ -93,7 +112,7 @@
                             <p class="contact-title">Phone</p>
 
                             <a href="tel:+17654303426" class="contact-link">+1 (765) 430-3426 (US)</a>
-                            <!-- <a href="tel:+345555555555" class="contact-link">+34 (555) 555-5555 (ES)</a> -->
+                             <a href="tel:+345555555555" class="contact-link">+34 (555) 555-5555 (ES)</a> 
                         </div>
 
                     </li>
@@ -161,40 +180,6 @@
                     </li>
 
 
-                    <!-- <li class="social-item">
-                        <a href="https://www.facebook.com/nxg1499/" class="social-link">
-                            <ion-icon name="logo-facebook"></ion-icon>
-                        </a>
-                    </li>
-
-                    <li class="social-item">
-                        <a href="https://bsky.app/profile/nxg1029.bsky.social" class="social-link">
-                            <ion-icon name="logo-twitter"></ion-icon>
-                        </a>
-                    </li> -->
-
-
-
-                    <!-- <li class="social-item">
-                        <a href="https://www.reddit.com/user/niko1499/" class="social-link">
-                            <ion-icon name="logo-reddit"></ion-icon>
-                        </a>
-                    </li> -->
-
-
-
-                    <!-- <li class="social-item">
-                        <a href="https://www.instructables.com/member/niko1499/instructables/" class="social-link">
-                            <ion-icon name="logo-intructables"></ion-icon>
-                        </a>
-                    </li>
-
-
-                    <li class="social-item">
-                        <a href="https://steamcommunity.com/id/nxgamarra/" class="social-link">
-                            <ion-icon name="logo-steam"></ion-icon>
-                        </a>
-                    </li> -->
 
                     <li class="social-item">
                         <a href="http://www.transitchicago.com/diydisplay/?s1=41210&s2=41320&s3=40530&size=big&tto=n" class="social-link">
@@ -205,7 +190,7 @@
 
             </div>
 
-        </aside>
+        </aside> -->
 
 
 
@@ -226,23 +211,33 @@
                 <ul class="navbar-list">
 
                     <li class="navbar-item">
-                        <button class="navbar-link  active" data-nav-link>About</button>
+                        <a href="index.html">
+                            <button href="index.html" class="navbar-link active" data-nav-link>About</button>
+                        </a>
                     </li>
 
                     <li class="navbar-item">
-                        <button class="navbar-link" data-nav-link>Resume</button>
+                        <a href="resume.html">
+                            <button class="navbar-link " data-nav-link>Resume</button>
+                        </a>
                     </li>
 
                     <li class="navbar-item">
-                        <button class="navbar-link" data-nav-link>Expierence</button>
+                        <a href="expierence.html">
+                            <button class="navbar-link" data-nav-link>Expierence</button>
+                        </a>
                     </li>
 
                     <li class="navbar-item">
-                        <button class="navbar-link" data-nav-link>Portfolio</button>
+                        <a href="portfolio.html">
+                            <button class="navbar-link" data-nav-link>Portfolio</button>
+                        </a>
                     </li>
 
                     <li class="navbar-item">
-                        <button class="navbar-link" data-nav-link>Publications</button>
+                        <a href="publications.html">
+                            <button class="navbar-link" data-nav-link>Publications</button>
+                        </a>
                     </li>
 
                     <!-- <li class="navbar-item">
@@ -532,6 +527,10 @@
 
 
 
+
+
+
+
                     <!--
           - testimonials modal
         -->
@@ -569,729 +568,13 @@
             </article>
 
 
-            <!--
-        - #resume
-      -->
 
-            <article class="resume" data-page="resume">
 
-                <header>
-                    <h2 class="h2 article-title">Resume</h2>
-                </header>
 
 
 
-                <embed src="assets\images\Resume-Nikolas Xarles Gamarra.pdf" type="application/pdf" width="100%" height="1200px" title="Resume-Nikolas_Xarles_Gamarra" />
 
 
-
-
-
-
-            </article>
-
-
-            <!--
-        - #expierence
-      -->
-
-            <article class="expierence" data-page="expierence">
-
-                <header>
-                    <h2 class="h2 article-title">Expierence</h2>
-                </header>
-
-                <section class="timeline">
-
-                    <div class="title-wrapper">
-                        <div class="icon-box">
-                            <ion-icon name="book-outline"></ion-icon>
-                        </div>
-
-                        <h3 class="h3">Education</h3>
-                    </div>
-
-                    <ol class="timeline-list">
-
-
-
-                        <!-- <li class="timeline-item">
-
-                            <h4 class="h4 timeline-item-title">IIT Illinois Institute of Technology - Incomplete Masters of Science in Computer Science</h4>
-
-                            <span>2020 — 2021</span>
-
-                            <p class="timeline-text">
-                                Enrolled part time while working full time. Aquired 25% of the credit hours required for a masters degreen in Computer Science before deciding the shool/program wasn't right for me
-                            </p>
-
-                        </li> -->
-
-                        <li class="timeline-item">
-
-                            <h4 class="h4 timeline-item-title">WPI Worcester Polytechnic Institute</h4>
-                            <h4 class="h4 timeline-item-title">Bachelors of Science in Robotics Engineering</h4>
-                            <h3 class="h4 timeline-item-title">Minors in C.S. and M.E.</h4>
-
-                                <span>2015 — 2019</span>
-
-                                <p class="timeline-text">
-                                    Robotics Engineering Major with Dual minors in Computer Science and Mechanical Engineering
-                                </p>
-                                <a href="https://wpi.cleancatalog.net/robotics-engineering/robotics-engineering-major?_gl=1*mcdtrb*_ga*MTQxMjk3NDM0OC4xNzU5NDU5NzU1*_ga_RE35PKQB7J*czE3NTk1OTUzODEkbzEkZzEkdDE3NTk1OTU0NjkkajMyJGwwJGgw*_gcl_au*MTY0NDg4NTQwMi4xNzU5NTk1Mzgx">
-                                    <h4 class="external-link">wpi.edu/Robotics</h4>
-                                </a>
-                                <a href=""></a>
-                        </li>
-
-                        <li class="timeline-item">
-
-                            <h4 class="h4 timeline-item-title">West Lafayette Jr/Sr Highschool</h4>
-
-                            <span>2010 — 2015</span>
-                            <p class="timeline-text">
-                                Class of 2015
-                            </p>
-                            <p class="timeline-text">
-                                GPA 3.7
-                            </p>
-                            <p class="timeline-text">
-                                Driver for 3 years on FRC 461 West Side Boiler Invasion. Head of Mechanical Subteam Senior Year.
-                            </p>
-                            <a href="https://boilerinvasion.org/">
-                                <h4 class="external-link">Highschool Robotics Team</h4>
-                            </a>
-
-                            <p class="timeline-text">
-                                Track and Field - 100m, 400m, 4 x 100m
-                            </p>
-
-
-
-                            <p class="timeline-text">
-                                Debate - Lincoln Douglas (LD)
-                            </p>
-
-
-
-
-
-
-                        </li>
-
-                    </ol>
-
-                </section>
-
-                <section class="timeline">
-
-                    <div class="title-wrapper">
-                        <div class="icon-box">
-                            <ion-icon name="book-outline"></ion-icon>
-                        </div>
-
-                        <h3 class="h3">Work Expierence</h3>
-                    </div>
-
-                    <ol class="timeline-list">
-
-
-                        <li class="timeline-item">
-
-                            <h4 class="h4 timeline-item-title">Chicago Dryer - Controls Engineer</h4>
-
-                            <span> 2025-Present </span>
-
-                            <p class="timeline-text">
-                                controls for industrial scale laundry machines for ironing and folding with Beckhoff TwinCAT.
-
-                            </p>
-                            <a href=""></a>
-                            <a href="https://www.chidry.com/">
-                                <h4 class="external-link">www.chidry.com</h4>
-                            </a>
-
-                        </li>
-
-                        <li class="timeline-item">
-
-                            <h4 class="h4 timeline-item-title">Progress Rail</h4>
-
-                            <span> 2023-2025 </span>
-
-                            <p class="timeline-text">
-                                Architecting, , and testing of embedded software deployed on QNX Real-Time Operating System. Knowledge of intricate relationships between electrical, mechanical, and software systems on locomotives. Reading electrical diagrams. Rigorous testing and peer
-                                review of software. Automating software builds with bash scripts in a Unix shell. Detailed and traceable documentation of software changes in compliance with EN 50716 and MISRA for safety certifications. Use of Jira and
-                                command line Git.
-                            </p>
-                            <a href="https://www.progressrail.com/">
-                                <h4 class="external-link">www.progressrail.com</h4>
-                            </a>
-                            <a href=""></a>
-
-                        </li>
-
-                        <li class="timeline-item">
-
-                            <h4 class="h4 timeline-item-title">Robotic Systems Integration </h4>
-
-                            <span>2019-2023</span>
-
-                            <p class="timeline-text">
-                                Design and implementation of an API and G-Code Parser for 3D trajectory planning on arbitrary kinematics. Utilization of EtherCAT for real time motion control. Backend motion controller software development. Collaborative . Design and implementation of
-                                automated software and hardware tests. Design (Solidworks) of industrial automation workcells and drive/motor demonstration units. Selection of sensors, motors, and servo drives for industrial automation projects. Front
-                                end user interface design in C# WPF.
-                            </p>
-                            <a href="https://www.roboticsys.com/">
-                                <h4 class="external-link">www.roboticsys.com</h4>
-                            </a>
-                            <a href=""></a>
-
-                        </li>
-                        <li class="timeline-item">
-
-                            <h4 class="h4 timeline-item-title">Summer Intern - Vehicle Software & Intelligence Center </h4>
-
-                            <span>2018</span>
-
-                            <p class="timeline-text">
-                                Over the summer of 2018 I interned abroad in Shanghai at SAIC's Vehicle Software & Intelligence Center. During my internship I developed a collection of ROS (Robot Operating System) nodes that utilized PCL (Point Cloud Library) to interpret point cloud
-                                data. The program was capable of reporting location and type of various objects above the road surface. Below a before and after image can be seen of how my program visualized the objects it detected on the road using RVIZ.
-                                Each vehicle has a box around it originating at its estimated center. The color of the box depends on an estimate of the type/size based on number of points and proximity. The green rings represent the points the program
-                                things are on the road plane. To detect the objects the program utilizes clustering based on difference of normals for points above the road plane. Using well designed launch files and ROS parameters the program can quickly
-                                be set to work with data from various 3D lidars, .PCD files, and ROS bag streams. During my internship I learned a lot about lidars, PCL, ROS, C++, and Chinese culture.
-                            </p>
-
-
-                            <a href="https://github.com/niko1499/Lidar_Utility">
-                                <h4 class="external-link">github.com/niko1499/Lidar_Utility</h4>
-                            </a>
-
-                            <a href="https://mp.weixin.qq.com/s/ZfcZE6RBF-r7RCSsfABUzQ">
-                                <h4 class="external-link">WeChat Internship Web Page</h4>
-                            </a>
-                        </li>
-
-                        <li class="timeline-item">
-
-                            <h4 class="h4 timeline-item-title">Engineering Computer Network(ECN) </h4>
-
-                            <span>2016</span>
-
-                            <p class="timeline-text">
-                                IT support for Purdue Engineering departments. Gained experience collaborating in a work environment to solve problems for users. Gained additional experience using Windows and Linux command line interfaces and using a trouble ticket system.
-                            </p>
-                            <a href="https://engineering.purdue.edu/ECN">
-                                <h4 class="external-link">engineering.purdue.edu/ECN</h4>
-                            </a>
-
-
-                        </li>
-
-                        <li class="timeline-item">
-
-                            <h4 class="h4 timeline-item-title">House Manager: Alpha Chi Rho - Delta Sigma Phi </h4>
-
-                            <span>2016-2019</span>
-
-                            <p class="timeline-text">
-                                Responsible for the organization and management of regular work crews as well as the operation and maintenance of the buildings, grounds, and the equipment of all fraternity housing.
-                            </p>
-                            <a href="axpdsp.com">
-                                <h4 class="external-link">AxpDsp.com</h4>
-                            </a>
-
-                        </li>
-
-                        <li class="timeline-item">
-
-                            <h4 class="h4 timeline-item-title">Elk-Skegemog Lakes Association (ESLA)</h4>
-
-                            <span>2015</span>
-
-                            <p class="timeline-text">
-                                A summer internship I did in 2015 with the Elk-Skegemog Lakes Association where several partners and myself researched the effectiveness of various treatment methods for the invasive species of Eurasian watermilfoil.
-                            </p>
-                            <a href="https://docs.google.com/presentation/d/1N8cH8QeWJmwZEO6JuOivWuusq6703JLd76i-g47scTY/edit?slide=id.p#slide=id.p">
-                                <h4 class="external-link">Presentation on water milfoil</h4>
-                            </a>
-
-                        </li>
-
-                        <li class="timeline-item">
-
-                            <h4 class="h4 timeline-item-title">Village Market Food Center</h4>
-
-                            <span>2015</span>
-
-                            <p class="timeline-text">
-                                Worked as a Cashier/Stocker for the Village Market Food Center in Elk Rapids MI from May 2015 - Aug 2015. Gained experience working 12 hour days and 40+ hour weeks.
-                            </p>
-
-                        </li>
-
-                    </ol>
-
-                </section>
-            </article>
-
-
-
-
-
-            <!--
-        - #PORTFOLIO
-      -->
-
-            <article class="portfolio" data-page="portfolio">
-
-                <header>
-                    <h2 class="h2 article-title">Portfolio</h2>
-                </header>
-
-                <section class="projects">
-
-                    <ul class="filter-list">
-
-                        <li class="filter-item">
-                            <button class="active" data-filter-btn>All</button>
-                        </li>
-
-                        <li class="filter-item">
-                            <button data-filter-btn>Photography</button>
-                        </li>
-
-                        <li class="filter-item">
-                            <button data-filter-btn>CAD</button>
-                        </li>
-
-                        <li class="filter-item">
-                            <button data-filter-btn>Software</button>
-                        </li>
-
-                        <li class="filter-item">
-                            <button data-filter-btn>Urbanism</button>
-                        </li>
-
-                        <li class="select-item">
-                            <button data-select-item>Woodworking</button>
-                        </li>
-
-                        <li class="select-item">
-                            <button data-select-item>Robotics</button>
-                        </li>
-
-                        <li class="select-item">
-                            <button data-select-item>Home Improvement</button>
-                        </li>
-
-
-                        <!-- <li class="filter-item">
-                            <button class="active" data-filter-btn>All</button>
-                        </li>
-
-                        <li class="filter-item">
-                            <button data-filter-btn></button>
-                        </li>
-
-                        <li class="filter-item">
-                            <button data-filter-btn>CAD</button>
-                        </li>
-
-                        <li class="filter-item">
-                            <button data-filter-btn>Robotics</button>
-                        </li>
-
-                        <li class="filter-item">
-                            <button data-filter-btn>Home Improvement</button>
-                        </li>
-
-                        <li class="filter-item">
-                            <button data-filter-btn>Woodworking</button> -->
-                        </li>
-                    </ul>
-
-                    <div class="filter-select-box">
-
-                        <button class="filter-select" data-select>
-
-              <div class="select-value" data-selecct-value>Select category</div>
-
-              <div class="select-icon">
-                <ion-icon name="chevron-down"></ion-icon>
-              </div>
-
-            </button>
-
-                        <ul class="select-list">
-
-                            <li class="select-item">
-                                <button data-select-item>All</button>
-                            </li>
-
-                            <li class="select-item">
-                                <button data-select-item>Photography</button>
-                            </li>
-
-                            <li class="select-item">
-                                <button data-select-item>CAD</button>
-                            </li>
-
-                            <li class="select-item">
-                                <button data-select-item>Software</button>
-                            </li>
-
-                            <li class="select-item">
-                                <button data-select-item>Urbanism</button>
-                            </li>
-
-                            <li class="select-item">
-                                <button data-select-item>Woodworking</button>
-                            </li>
-
-                            <li class="select-item">
-                                <button data-select-item>Robotics</button>
-                            </li>
-
-                            <li class="select-item">
-                                <button data-select-item>Home Improvement</button>
-                            </li>
-
-                        </ul>
-
-                    </div>
-
-                    <ul class="project-list">
-
-                        <li class="project-item  active" data-filter-item data-category="urbanism">
-                            <a href="https://chicagopedwaymap.com/">
-
-                                <figure class="project-img">
-                                    <div class="project-item-icon-box">
-                                        <ion-icon name="eye-outline"></ion-icon>
-                                    </div>
-
-                                    <img src="./assets/images\PedwayMapThumb.jpg" alt="Pedway Map" loading="lazy">
-                                </figure>
-
-                                <h3 class="project-title">PedwayMap</h3>
-
-                                <p class="project-category">Urbanism</p>
-
-                            </a>
-                        </li>
-
-                        <li class="project-item  active" data-filter-item data-category="robotics" data-category="software">
-                            <a href="#">
-
-                                <figure class="project-img">
-                                    <div class="project-item-icon-box">
-                                        <ion-icon name="eye-outline"></ion-icon>
-                                    </div>
-
-                                    <img src="./assets/images/SuroBotThumb.png" alt="orizon" loading="lazy">
-                                </figure>
-
-                                <h3 class="project-title">SuroBot</h3>
-
-                                <p class="project-category">Robotics</p>
-
-                            </a>
-                        </li>
-
-                        <li class="project-item  active" data-filter-item data-category="cad">
-                            <a href="#">
-
-                                <figure class="project-img">
-                                    <div class="project-item-icon-box">
-                                        <ion-icon name="eye-outline"></ion-icon>
-                                    </div>
-
-                                    <img src="./assets/images/MotoBiciThumb.jpg" alt="fundo" loading="lazy">
-                                </figure>
-
-                                <h3 class="project-title">Motorized Bike</h3>
-
-                                <p class="project-category">CAD</p>
-
-                            </a>
-                        </li>
-
-                        <li class="project-item  active" data-filter-item data-category="cad">
-                            <a href="#">
-
-                                <figure class="project-img">
-                                    <div class="project-item-icon-box">
-                                        <ion-icon name="eye-outline"></ion-icon>
-                                    </div>
-
-                                    <img src="./assets/images/CatioThumb.png" alt="brawlhalla" loading="lazy">
-                                </figure>
-
-                                <h3 class="project-title">Catio</h3>
-
-                                <p class="project-category">CAD</p>
-
-                            </a>
-                        </li>
-
-                        <li class="project-item  active" data-filter-item data-category="photography">
-                            <a href="https://www.instagram.com/nxg1499/">
-
-                                <figure class="project-img">
-                                    <div class="project-item-icon-box">
-                                        <ion-icon name="eye-outline"></ion-icon>
-                                    </div>
-
-                                    <img src="./assets/images/InstagramThumb.png" alt="dsm." loading="lazy">
-                                </figure>
-
-                                <h3 class="project-title">Art Instagram</h3>
-
-                                <p class="project-category">Photography</p>
-
-                            </a>
-                        </li>
-
-                        <li class="project-item  active" data-filter-item data-category="photography">
-                            <a href="#">
-
-                                <figure class="project-img">
-                                    <div class="project-item-icon-box">
-                                        <ion-icon name="eye-outline"></ion-icon>
-                                    </div>
-
-                                    <img src="./assets/images/FilmPhotographyThumb.png" alt="metaspark" loading="lazy">
-                                </figure>
-
-                                <h3 class="project-title">Film Photography</h3>
-
-                                <p class="project-category">Photography</p>
-
-                            </a>
-                        </li>
-
-                        <li class="project-item  active" data-filter-item data-category="woodworking">
-                            <a href="#">
-
-                                <figure class="project-img">
-                                    <div class="project-item-icon-box">
-                                        <ion-icon name="eye-outline"></ion-icon>
-                                    </div>
-
-                                    <img src="./assets/images/WoodCabinetThumb.png" alt="summary" loading="lazy">
-                                </figure>
-
-                                <h3 class="project-title">Wooden Cabinet</h3>
-
-                                <p class="project-category">Woodworking</p>
-
-                            </a>
-                        </li>
-
-                        <!-- <li class="project-item  active" data-filter-item data-category="">
-                            <a href="#">
-
-                                <figure class="project-img">
-                                    <div class="project-item-icon-box">
-                                        <ion-icon name="eye-outline"></ion-icon>
-                                    </div>
-
-                                    <img src="./assets/images/project-7.png" alt="summary" loading="lazy">
-                                </figure>
-
-                                <h3 class="project-title">Crayonista</h3>
-
-                                <p class="project-category"></p>
-
-                            </a>
-                        </li> -->
-
-                        <li class="project-item  active" data-filter-item data-category="cad">
-                            <a href="#">
-
-                                <figure class="project-img">
-                                    <div class="project-item-icon-box">
-                                        <ion-icon name="eye-outline"></ion-icon>
-                                    </div>
-
-                                    <img src="./assets/images/3dSinkThumb.jpg" alt="task manager" loading="lazy">
-                                </figure>
-
-                                <h3 class="project-title">Kitchen Faucet</h3>
-
-                                <p class="project-category">CAD</p>
-
-                            </a>
-                        </li>
-
-                        <li class="project-item  active" data-filter-item data-category="">
-                            <a href="#">
-
-                                <figure class="project-img">
-                                    <div class="project-item-icon-box">
-                                        <ion-icon name="eye-outline"></ion-icon>
-                                    </div>
-
-                                    <img src="./assets/images/ElectricalWorkThumb.png" alt="arrival" loading="lazy">
-                                </figure>
-
-                                <h3 class="project-title">Home Electrical</h3>
-
-                                <p class="project-category"></p>
-
-                            </a>
-                        </li>
-
-                    </ul>
-
-                </section>
-
-            </article>
-
-
-
-
-
-            <!--
-        - #PUB
-      -->
-
-            <article class="publications" data-page="publications">
-
-
-
-                <header>
-                    <h2 class="h2 article-title">Publications</h2>
-                </header>
-
-                <a href="https://scholar.google.com/citations?user=lQuhe-kAAAAJ&hl=en">
-                    <h4 class="external-link">Google Scholar</h4>
-                </a>
-
-                <hr style="margin-bottom: 20px;">
-
-
-                <section class="blog-posts">
-
-                    <ul class="blog-posts-list">
-
-                        <li class="blog-post-item">
-                            <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=lQuhe-kAAAAJ&citation_for_view=lQuhe-kAAAAJ:u-x6o8ySG0sC">
-
-                                <figure class="blog-banner-box">
-                                    <img src="./assets/images/RBE 2001 Curriculum Review.png" alt="RBE 2001 Curriculum Review" loading="lazy">
-                                </figure>
-
-                                <div class="blog-content">
-
-                                    <div class="blog-meta">
-                                        <p class="blog-category">Interactive Qualifying Project (IQP)</p>
-
-                                        <span class="dot"></span>
-
-                                        <time datetime="2018-03-23">March 23, 2018</time>
-                                    </div>
-
-                                    <h3 class="h3 blog-item-title">RBE 2001 Curriculum Review</h3>
-
-                                    <p class="blog-text">
-                                        The RBE curriculum has been known to be particularly rigorous, with RBE 2001 being regarded as one of the more difficult courses. This project’s objective was to make suggestions to the curriculum review committee to aid in reducing the difficulty of
-                                        the course while maintaining the amount of information that students learn as a result of taking the course. Key issues were identified based on surveys, course evaluations, and interviews. These interviews were
-                                        conducted on students, teaching assistants, student assistants, and professors associated with the course. As a result of the aforementioned methods, it became apparent that the labs, final project, and reference
-                                        materials were the crux of the issue. This project created suggestions for lab improvements, a new final project, and additional materials to aid students with use of lab equipment and key concepts that are difficult
-                                        to understand.
-                                    </p>
-
-                                </div>
-
-                            </a>
-                        </li>
-
-                        <li class="blog-post-item">
-                            <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=lQuhe-kAAAAJ&citation_for_view=lQuhe-kAAAAJ:u5HHmVD_uO8C">
-
-                                <figure class="blog-banner-box">
-                                    <img src="./assets/images/Automatic Vehicle Recharging Station (AVRS).png" alt="Automatic Vehicle Recharging Station (AVRS)" loading="lazy">
-                                </figure>
-
-                                <div class="blog-content">
-
-                                    <div class="blog-meta">
-                                        <p class="blog-category">Major Qualifying Project (MQP)</p>
-
-                                        <span class="dot"></span>
-
-                                        <time datetime="2019-4-25">April 25, 2019</time>
-                                    </div>
-
-                                    <h3 class="h3 blog-item-title">Automatic Vehicle Recharging Station (AVRS)</h3>
-
-                                    <p class="blog-text">
-                                        The goal of this project is to recharge autonomous electric vehicles, thus automating one of the last steps preventing a level 5 autonomous vehicle from being completely independent from human assistance. For this project we are using an ABB industrial
-                                        robotic arm with a custom end effector. Our tooling has force sensing and a tool changer, allowing for switching between a pneumatic flap opener and two charging port standards. To help us achieve this goal we implemented
-                                        custom computer vision and point cloud processing software. System integration was done using ROS-Industrial. Ultimately, while we were able to plug in our test vehicle using the ABB arm, there were issues with
-                                        latency as well as with the reliability of the real time path planning features of ROS-Industrial.
-                                    </p>
-
-                                </div>
-
-                            </a>
-                        </li>
-
-
-
-                    </ul>
-
-                </section>
-
-            </article>
-
-
-
-
-
-            <!--
-        - #CONTACT
-      -->
-
-            <!-- <article class="contact" data-page="contact">
-
-                <header>
-                    <h2 class="h2 article-title">Contact</h2>
-                </header>
-
-              /// <section class="mapbox" data-mapbox>
-                ///    <figure>
-                  ///      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d199666.5651251294!2d-121.58334177520186!3d38.56165006739519!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x809ac672b28397f9%3A0x921f6aaa74197fdb!2sSacramento%2C%20CA%2C%20USA!5e0!3m2!1sen!2sbd!4v1647608789441!5m2!1sen!2sbd"
-                            width="400" height="300" loading="lazy"></iframe>
-                 ///   </figure>
-               /// </section> 
-
-                <section class="contact-form">
-
-                    <h3 class="h3 form-title">Contact Form</h3>
-
-                    <form action="#" class="form" data-form>
-
-                        <div class="input-wrapper">
-                            <input type="text" name="fullname" class="form-input" placeholder="Full name" required data-form-input>
-
-                            <input type="email" name="email" class="form-input" placeholder="Email address" required data-form-input>
-                        </div>
-
-                        <textarea name="message" class="form-input" placeholder="Your Message" required data-form-input></textarea>
-
-                        <button class="form-btn" type="submit" disabled data-form-btn>
-              <ion-icon name="paper-plane"></ion-icon>
-              <span>Send Message</span>
-            </button>
-
-                    </form>
-
-                </section>
-
-            </article> -->
 
         </div>
 
