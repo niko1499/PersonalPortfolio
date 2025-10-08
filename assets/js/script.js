@@ -81,15 +81,19 @@ const filterItems = document.querySelectorAll("[data-filter-item]");
 const filterFunc = function(selectedValue) {
 
     for (let i = 0; i < filterItems.length; i++) {
+        const dataCat = filterItems[i].dataset.category ? filterItems[i].dataset.category.toLowerCase() : "";
+        const categories = dataCat.split(" ");
 
         if (selectedValue === "all") {
             filterItems[i].classList.add("active");
-        } else if (selectedValue === filterItems[i].dataset.category) {
+        } else if (
+            dataCat === selectedValue ||
+            categories.includes(selectedValue)
+        ) {
             filterItems[i].classList.add("active");
         } else {
             filterItems[i].classList.remove("active");
         }
-
     }
 
 }
