@@ -935,6 +935,7 @@ main {
 
 .filter-list {
     display: none;
+    max-width: 210px;
 }
 
 .filter-select-box {
