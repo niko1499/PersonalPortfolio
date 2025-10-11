@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Gallery</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <main>
+        <article class="project-detail active" data-page="project-detail">
+            <header>
+                <h2 class="h2 article-title" id="project-title">Project Title</h2>
+            </header>
+            <section class="project-meta">
+                <div class="date" id="project-date">Date:
+                    <!-- Fill date here -->
+                </div>
+                <div class="description" id="project-description">Project description goes here.</div>
+            </section>
+            <section class="project-gallery" id="project-gallery">
+                <!-- Images will be loaded here by JS -->
+            </section>
+        </article>
+    </main>
+    <script>
+        // Automatically load all images from a folder matching the HTML file name
+        (function() {
+            const gallery = document.getElementById('project-gallery');
+            const pageName = window.location.pathname.split('/').pop().replace('.html', '');
+            // You must place all images for this project in a folder named exactly as the HTML file (without .html)
+            // Example: for 'project-template.html', images go in './project-template/'
+            // List of supported image extensions
+            const exts = ['jpg', 'jpeg', 'png', 'gif', 'webp'];
+            // Try to load up to 30 images named 1.jpg, 2.jpg, ...
+            for (let i = 1; i <= 30; i++) {
+                let found = false;
+                for (const ext of exts) {
+                    const imgPath = `./${pageName}/${i}.${ext}`;
+                    const img = new Image();
+                    img.src = imgPath;
+                    img.onload = function() {
+                        if (!found) {
+                            found = true;
+                            gallery.appendChild(img);
+                        }
+                    };
+                }
+            }
+        })();
+    </script>
+</body>
+
+</html>
