@@ -1946,4 +1946,7 @@ textarea.form-input::-webkit-resizer {
         width: max-content;
         margin: auto;
     }
+    .rounded-box {
+        border-radius: 20px;
+    }
 }
