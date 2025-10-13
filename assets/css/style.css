@@ -1935,4 +1935,15 @@ textarea.form-input::-webkit-resizer {
         color: var(--light-gray);
         font-size: var(--fs-6);
     }
+    .project-gallery {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+        gap: 20px;
+        margin-top: 30px;
+    }
+    .main-content {
+        position: relative;
+        width: max-content;
+        margin: auto;
+    }
 }

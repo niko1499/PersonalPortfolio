@@ -29,19 +29,14 @@
         </article>
     </main>
     <script>
-        // Automatically load all images from a folder matching the HTML file name
+        // Automatically load all images from the same folder as the HTML file
         (function() {
             const gallery = document.getElementById('project-gallery');
-            const pageName = window.location.pathname.split('/').pop().replace('.html', '');
-            // You must place all images for this project in a folder named exactly as the HTML file (without .html)
-            // Example: for 'project-template.html', images go in './project-template/'
-            // List of supported image extensions
             const exts = ['jpg', 'jpeg', 'png', 'gif', 'webp'];
-            // Try to load up to 30 images named 1.jpg, 2.jpg, ...
             for (let i = 1; i <= 30; i++) {
                 let found = false;
                 for (const ext of exts) {
-                    const imgPath = `./${pageName}/${i}.${ext}`;
+                    const imgPath = `./${i}.${ext}`;
                     const img = new Image();
                     img.src = imgPath;
                     img.onload = function() {
