@@ -1003,17 +1003,21 @@ main {
 
 .project-list {
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap: 30px;
     margin-bottom: 10px;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .project-item {
     display: none;
+    width: 100%;
 }
 
 .project-item.active {
-    display: block;
+    display: flex;
+    flex-direction: column;
     animation: scaleUp 0.25s ease forwards;
 }
 
@@ -1033,10 +1037,11 @@ main {
 .project-img {
     position: relative;
     width: 100%;
-    height: 200px;
+    aspect-ratio: 4/3;
     border-radius: 16px;
     overflow: hidden;
     margin-bottom: 15px;
+    background: var(--eerie-black-2);
 }
 
 .project-img::before {
