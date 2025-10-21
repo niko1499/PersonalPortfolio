@@ -84,7 +84,7 @@
             const htmlFile = window.location.pathname.split('/').pop();
             const folderName = htmlFile ? htmlFile.replace(/\.html?$/, '') : '';
             const exts = ['jpg', 'jpeg', 'png', 'gif', 'webp', 'bmp'];
-            for (let i = 1; i <= 30; i++) {
+            for (let i = 1; i <= 100; i++) {
                 let found = false;
                 for (const ext of exts) {
                     const imgPath = `./${folderName}/${i}.${ext}`;
