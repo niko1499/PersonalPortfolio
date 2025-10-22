@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Gallery</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-BHZD8TQMMV"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'G-BHZD8TQMMV');
+</script>
+
+<body>
+    <main>
+        <article class="project-detail active main-content" data-page="project-detail">
+            <header>
+                <h2 class="h2 article-title" id="project-title">Automatic Vehicle Recharging System (AVRS) Major Qualifying Project (MQP)
+                </h2>
+                <div class="">
+                    <!--
+        - #NAVBAR
+      -->
+                    <nav class="navbar">
+                        <ul class="navbar-list">
+                            <li class="navbar-item">
+                                <a href="../portfolio.html">
+                                    <button class="navbar-link " data-nav-link>Back to Portfolio</button>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+
+            </header>
+            <section class="project-meta">
+
+                <div class="date" id="project-date">2014-2015
+                    <!-- Fill date here -->
+                </div>
+                <div class="description" id="project-description">
+                    The goal of this project is to recharge autonomous electric vehicles, thus automating one of the last steps preventing a level 5 autonomous vehicle from being completely independent from human assistance. For this project we are using an ABB industrial
+                    robotic arm with a custom end effector. Our tooling has force sensing and a tool changer, allowing for switching between a pneumatic flap opener and two charging port standards. To help us achieve this goal we implemented custom computer
+                    vision and point cloud processing software. System integration was done using ROS-Industrial. Ultimately, while we were able to plug in our test vehicle using the ABB arm, there were issues with latency as well as with the reliability
+                    of the real time path planning features of ROS-Industrial.</div>
+
+                <a href="https://github.com/AVRS-MQP">
+                    <h4 class="external-link">Git Repo
+                    </h4>
+                </a>
+                <a href="https://docs.google.com/presentation/d/1sCNVGunD14j0vhfP5bp6i-Br7v_YKkK79cEJf1tNPGU/edit?usp=sharing">
+                    <h4 class="external-link">Presentation
+                    </h4>
+                </a>
+                <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=lQuhe-kAAAAJ&citation_for_view=lQuhe-kAAAAJ:u5HHmVD_uO8C">
+                    <h4 class="external-link">Report
+                    </h4>
+                </a>
+
+            </section>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/RYhE4O5Mo_E?si=ou95NBIaDF3Jzeid" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <section class="project-gallery" id="project-gallery">
+                <!-- Images will be loaded here by JS -->
+            </section>
+        </article>
+    </main>
+    <script>
+        // Automatically load all images from a folder matching the HTML file name
+        (function() {
+            const gallery = document.getElementById('project-gallery');
+            // Dynamically determine the subfolder name based on the HTML file name
+            const htmlFile = window.location.pathname.split('/').pop();
+            const folderName = htmlFile ? htmlFile.replace(/\.html?$/, '') : '';
+            const exts = ['jpg', 'jpeg', 'png', 'gif', 'webp', 'bmp'];
+            for (let i = 1; i <= 100; i++) {
+                let found = false;
+                for (const ext of exts) {
+                    const imgPath = `./${folderName}/${i}.${ext}`;
+                    const img = new Image();
+                    img.src = imgPath;
+                    img.onload = function() {
+                        if (!found) {
+                            found = true;
+                            gallery.appendChild(img);
+                        }
+                    };
+                }
+            }
+        })();
+    </script>
+</body>
+
+</html>
