@@ -75,6 +75,55 @@ for (let i = 0; i < selectItems.length; i++) {
     });
 }
 
+// Apply filter based on URL fragment (hash)
+const applyFilterFromHash = function() {
+    const hash = decodeURIComponent(window.location.hash.replace(/^#/, '')).toLowerCase();
+    const selectedValue = hash && hash !== '' ? hash : 'all';
+
+    // update select display
+    // try to find a button with matching text to preserve casing
+    let matchedBtn = null;
+    for (let i = 0; i < filterBtn.length; i++) {
+        if (filterBtn[i].innerText.trim().toLowerCase() === selectedValue) {
+            matchedBtn = filterBtn[i];
+            break;
+        }
+    }
+
+    if (matchedBtn) {
+        selectValue.innerText = matchedBtn.innerText;
+    } else {
+        // fallback: capitalize first letter
+        selectValue.innerText = selectedValue.charAt(0).toUpperCase() + selectedValue.slice(1);
+    }
+
+    // run filter and update active button state
+    filterFunc(selectedValue);
+
+    // update active classes on buttons
+    if (matchedBtn) {
+        // remove active from previous
+        for (let i = 0; i < filterBtn.length; i++) {
+            filterBtn[i].classList.remove('active');
+        }
+        matchedBtn.classList.add('active');
+        lastClickedBtn = matchedBtn;
+    } else {
+        // if no match, clear active except 'All' if present
+        for (let i = 0; i < filterBtn.length; i++) {
+            if (filterBtn[i].innerText.trim().toLowerCase() === 'all') {
+                filterBtn[i].classList.add('active');
+                lastClickedBtn = filterBtn[i];
+            } else {
+                filterBtn[i].classList.remove('active');
+            }
+        }
+    }
+};
+
+// handle hash changes (back/forward/shareable URLs)
+window.addEventListener('hashchange', applyFilterFromHash);
+
 // filter variables
 const filterItems = document.querySelectorAll("[data-filter-item]");
 
@@ -106,16 +155,16 @@ for (let i = 0; i < filterBtn.length; i++) {
     filterBtn[i].addEventListener("click", function() {
 
         let selectedValue = this.innerText.toLowerCase();
-        selectValue.innerText = this.innerText;
-        filterFunc(selectedValue);
-
-        lastClickedBtn.classList.remove("active");
-        this.classList.add("active");
-        lastClickedBtn = this;
+        // update the URL hash which triggers applyFilterFromHash via hashchange
+        // encode to handle spaces/special chars
+        window.location.hash = encodeURIComponent(selectedValue);
 
     });
 
 }
+
+// Apply filter once on load (respect any existing hash)
+applyFilterFromHash();
 
 
 

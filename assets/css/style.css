@@ -433,6 +433,13 @@ main {
     font-size: var(--fs-7);
 }
 
+.contact-type {
+    color: var(--light-gray-70);
+    font-size: 0.85em;
+    margin-left: 8px;
+    font-weight: var(--fw-300);
+}
+
 .contact-info address {
     font-style: normal;
 }
@@ -1180,7 +1187,7 @@ main {
 
 .blog-meta :is(.blog-category, time) {
     color: var(--light-gray-70);
-    font-size: var(--fs-6);
+    font-size: var(--fs-8);/*was 6*/
     font-weight: var(--fw-300);
 }
 
