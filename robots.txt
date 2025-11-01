@@ -1,0 +1,26 @@
+# robots.txt for PersonalPortfolio
+# Replace nxg.engineer with your real site domain before publishing
+
+User-agent: *
+# Allow everything by default (explicit allow helps some crawlers)
+Allow: /
+
+# Block common non-public or backend paths
+Disallow: /cgi-bin/
+Disallow: /tmp/
+Disallow: /private/
+Disallow: /drafts/
+Disallow: /node_modules/
+
+# Prevent indexing of any on-site search results pages (if present)
+Disallow: /search
+
+# Optional crawl-delay (not used by Google). Uncomment if you notice heavy crawler load.
+# Crawl-delay: 5
+
+# Sitemap — replace with your actual domain and ensure sitemap.xml exists at that location
+Sitemap: https://nxg.engineer/sitemap.xml
+
+# Helpful note:
+# After you upload this to your site root, validate it using Google Search Console and
+# submit your sitemap so search engines can discover your pages quickly.
