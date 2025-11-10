@@ -3,7 +3,7 @@
 
 
 // element toggle function
-const elementToggleFunc = function(elem) { elem.classList.toggle("active"); }
+const elementToggleFunc = function (elem) { elem.classList.toggle("active"); }
 
 
 
@@ -12,7 +12,7 @@ const sidebar = document.querySelector("[data-sidebar]");
 const sidebarBtn = document.querySelector("[data-sidebar-btn]");
 
 // sidebar toggle functionality for mobile
-sidebarBtn.addEventListener("click", function() { elementToggleFunc(sidebar); });
+sidebarBtn.addEventListener("click", function () { elementToggleFunc(sidebar); });
 
 
 
@@ -28,24 +28,24 @@ const modalTitle = document.querySelector("[data-modal-title]");
 const modalText = document.querySelector("[data-modal-text]");
 
 // modal toggle function
-const testimonialsModalFunc = function() {
-    modalContainer.classList.toggle("active");
-    overlay.classList.toggle("active");
+const testimonialsModalFunc = function () {
+  modalContainer.classList.toggle("active");
+  overlay.classList.toggle("active");
 }
 
 // add click event to all modal items
 for (let i = 0; i < testimonialsItem.length; i++) {
 
-    testimonialsItem[i].addEventListener("click", function() {
+  testimonialsItem[i].addEventListener("click", function () {
 
-        modalImg.src = this.querySelector("[data-testimonials-avatar]").src;
-        modalImg.alt = this.querySelector("[data-testimonials-avatar]").alt;
-        modalTitle.innerHTML = this.querySelector("[data-testimonials-title]").innerHTML;
-        modalText.innerHTML = this.querySelector("[data-testimonials-text]").innerHTML;
+    modalImg.src = this.querySelector("[data-testimonials-avatar]").src;
+    modalImg.alt = this.querySelector("[data-testimonials-avatar]").alt;
+    modalTitle.innerHTML = this.querySelector("[data-testimonials-title]").innerHTML;
+    modalText.innerHTML = this.querySelector("[data-testimonials-text]").innerHTML;
 
-        testimonialsModalFunc();
+    testimonialsModalFunc();
 
-    });
+  });
 
 }
 
@@ -61,89 +61,36 @@ const selectItems = document.querySelectorAll("[data-select-item]");
 const selectValue = document.querySelector("[data-selecct-value]");
 const filterBtn = document.querySelectorAll("[data-filter-btn]");
 
-select.addEventListener("click", function() { elementToggleFunc(this); });
+select.addEventListener("click", function () { elementToggleFunc(this); });
 
 // add event in all select items
 for (let i = 0; i < selectItems.length; i++) {
-    selectItems[i].addEventListener("click", function() {
+  selectItems[i].addEventListener("click", function () {
 
-        let selectedValue = this.innerText.toLowerCase();
-        selectValue.innerText = this.innerText;
-        elementToggleFunc(select);
-        filterFunc(selectedValue);
-
-    });
-}
-
-// Apply filter based on URL fragment (hash)
-const applyFilterFromHash = function() {
-    const hash = decodeURIComponent(window.location.hash.replace(/^#/, '')).toLowerCase();
-    const selectedValue = hash && hash !== '' ? hash : 'all';
-
-    // update select display
-    // try to find a button with matching text to preserve casing
-    let matchedBtn = null;
-    for (let i = 0; i < filterBtn.length; i++) {
-        if (filterBtn[i].innerText.trim().toLowerCase() === selectedValue) {
-            matchedBtn = filterBtn[i];
-            break;
-        }
-    }
-
-    if (matchedBtn) {
-        selectValue.innerText = matchedBtn.innerText;
-    } else {
-        // fallback: capitalize first letter
-        selectValue.innerText = selectedValue.charAt(0).toUpperCase() + selectedValue.slice(1);
-    }
-
-    // run filter and update active button state
+    let selectedValue = this.innerText.toLowerCase();
+    selectValue.innerText = this.innerText;
+    elementToggleFunc(select);
     filterFunc(selectedValue);
 
-    // update active classes on buttons
-    if (matchedBtn) {
-        // remove active from previous
-        for (let i = 0; i < filterBtn.length; i++) {
-            filterBtn[i].classList.remove('active');
-        }
-        matchedBtn.classList.add('active');
-        lastClickedBtn = matchedBtn;
-    } else {
-        // if no match, clear active except 'All' if present
-        for (let i = 0; i < filterBtn.length; i++) {
-            if (filterBtn[i].innerText.trim().toLowerCase() === 'all') {
-                filterBtn[i].classList.add('active');
-                lastClickedBtn = filterBtn[i];
-            } else {
-                filterBtn[i].classList.remove('active');
-            }
-        }
-    }
-};
-
-// handle hash changes (back/forward/shareable URLs)
-window.addEventListener('hashchange', applyFilterFromHash);
+  });
+}
 
 // filter variables
 const filterItems = document.querySelectorAll("[data-filter-item]");
 
-const filterFunc = function(selectedValue) {
+const filterFunc = function (selectedValue) {
 
-    for (let i = 0; i < filterItems.length; i++) {
-        const dataCat = filterItems[i].dataset.category ? filterItems[i].dataset.category.toLowerCase() : "";
-        const categories = dataCat.split(" ");
+  for (let i = 0; i < filterItems.length; i++) {
 
-        if (selectedValue === "all") {
-            filterItems[i].classList.add("active");
-        } else if (
-            dataCat === selectedValue ||
-            categories.includes(selectedValue)
-        ) {
-            filterItems[i].classList.add("active");
-        } else {
-            filterItems[i].classList.remove("active");
-        }
+    if (selectedValue === "all") {
+      filterItems[i].classList.add("active");
+    } else if (selectedValue === filterItems[i].dataset.category) {
+      filterItems[i].classList.add("active");
+    } else {
+      filterItems[i].classList.remove("active");
     }
+
+  }
 
 }
 
@@ -152,19 +99,19 @@ let lastClickedBtn = filterBtn[0];
 
 for (let i = 0; i < filterBtn.length; i++) {
 
-    filterBtn[i].addEventListener("click", function() {
+  filterBtn[i].addEventListener("click", function () {
 
-        let selectedValue = this.innerText.toLowerCase();
-        // update the URL hash which triggers applyFilterFromHash via hashchange
-        // encode to handle spaces/special chars
-        window.location.hash = encodeURIComponent(selectedValue);
+    let selectedValue = this.innerText.toLowerCase();
+    selectValue.innerText = this.innerText;
+    filterFunc(selectedValue);
 
-    });
+    lastClickedBtn.classList.remove("active");
+    this.classList.add("active");
+    lastClickedBtn = this;
+
+  });
 
 }
-
-// Apply filter once on load (respect any existing hash)
-applyFilterFromHash();
 
 
 
@@ -175,16 +122,16 @@ const formBtn = document.querySelector("[data-form-btn]");
 
 // add event to all form input field
 for (let i = 0; i < formInputs.length; i++) {
-    formInputs[i].addEventListener("input", function() {
+  formInputs[i].addEventListener("input", function () {
 
-        // check form validation
-        if (form.checkValidity()) {
-            formBtn.removeAttribute("disabled");
-        } else {
-            formBtn.setAttribute("disabled", "");
-        }
+    // check form validation
+    if (form.checkValidity()) {
+      formBtn.removeAttribute("disabled");
+    } else {
+      formBtn.setAttribute("disabled", "");
+    }
 
-    });
+  });
 }
 
 
@@ -195,18 +142,18 @@ const pages = document.querySelectorAll("[data-page]");
 
 // add event to all nav link
 for (let i = 0; i < navigationLinks.length; i++) {
-    navigationLinks[i].addEventListener("click", function() {
+  navigationLinks[i].addEventListener("click", function () {
 
-        for (let i = 0; i < pages.length; i++) {
-            if (this.innerHTML.toLowerCase() === pages[i].dataset.page) {
-                pages[i].classList.add("active");
-                navigationLinks[i].classList.add("active");
-                window.scrollTo(0, 0);
-            } else {
-                pages[i].classList.remove("active");
-                navigationLinks[i].classList.remove("active");
-            }
-        }
+    for (let i = 0; i < pages.length; i++) {
+      if (this.innerHTML.toLowerCase() === pages[i].dataset.page) {
+        pages[i].classList.add("active");
+        navigationLinks[i].classList.add("active");
+        window.scrollTo(0, 0);
+      } else {
+        pages[i].classList.remove("active");
+        navigationLinks[i].classList.remove("active");
+      }
+    }
 
-    });
+  });
 }
