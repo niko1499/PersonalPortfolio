@@ -6,43 +6,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Project Gallery</title>
     <link rel="stylesheet" href="../assets/css/style.css">
-
 </head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-BHZD8TQMMV"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'G-BHZD8TQMMV');
+</script>
 
 <body>
-
-
     <main>
-
-
-
         <article class="project-detail active main-content" data-page="project-detail">
             <header>
                 <h2 class="h2 article-title" id="project-title">Wooden Cabinet</h2>
                 <div class="">
-
                     <!--
         - #NAVBAR
       -->
-
                     <nav class="navbar">
-
                         <ul class="navbar-list">
-
-
-
                             <li class="navbar-item">
                                 <a href="../portfolio.html">
                                     <button class="navbar-link " data-nav-link>Back to Portfolio</button>
                                 </a>
                             </li>
-
-
-
-
-
                         </ul>
-
                     </nav>
                 </div>
 
@@ -64,12 +58,14 @@
         // Automatically load all images from a folder matching the HTML file name
         (function() {
             const gallery = document.getElementById('project-gallery');
-            // Since this HTML is in 'projects/MotorizedBike/', images are in the same folder
-            const exts = ['jpg', 'jpeg', 'png', 'gif', 'webp'];
-            for (let i = 1; i <= 30; i++) {
+            // Dynamically determine the subfolder name based on the HTML file name
+            const htmlFile = window.location.pathname.split('/').pop();
+            const folderName = htmlFile ? htmlFile.replace(/\.html?$/, '') : '';
+            const exts = ['jpg', 'jpeg', 'png', 'gif', 'webp', 'bmp'];
+            for (let i = 1; i <= 100; i++) {
                 let found = false;
                 for (const ext of exts) {
-                    const imgPath = `./${i}.${ext}`;
+                    const imgPath = `./${folderName}/${i}.${ext}`;
                     const img = new Image();
                     img.src = imgPath;
                     img.onload = function() {

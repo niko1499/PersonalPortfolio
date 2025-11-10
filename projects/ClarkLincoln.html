@@ -48,7 +48,12 @@
                     <!-- Fill date here -->
                 </div>
                 <div class="description" id="project-description">Clark, Lincoln, Wells Intersection Chicago. Designed as an example of a way to improve pedestrian and bike saftey for political street saftey adcocacy.</div>
-                <embed src="/projects/ClarkLincoln/clw.pdf" type="application/pdf" width="100%" height="1200px" title="CLark Lincoln Wells" />
+                <!-- Use a relative path so the PDF loads whether served or opened locally -->
+                <object data="./ClarkLincoln/ClarkLincolnWells.pdf" type="application/pdf" width="100%" height="1200px">
+                    <p>PDF cannot be displayed in this browser. You can
+                        <a href="./ClarkLincoln/ClarkLincolnWells.pdf" target="_blank" rel="noopener">open or download the Clark Lincoln Wells PDF</a> instead.
+                    </p>
+                </object>
 
             </section>
 
