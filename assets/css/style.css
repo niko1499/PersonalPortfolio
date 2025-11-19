@@ -478,6 +478,11 @@ main {
     border-radius: 12px 12px 0 0;
     box-shadow: var(--shadow-2);
     z-index: 5;
+    /* consistent sizing across pages */
+    height: 56px;
+    display: flex;
+    align-items: center;
+    padding: 0 12px;
 }
 
 .navbar-list {
@@ -486,12 +491,14 @@ main {
     justify-content: center;
     align-items: center;
     padding: 0 10px;
+    height: 100%;
 }
 
 .navbar-link {
     color: var(--light-gray);
     font-size: var(--fs-8);
-    padding: 20px 7px;
+    /* horizontal spacing only; vertical alignment handled by navbar height */
+    padding: 0 12px;
     transition: color var(--transition-1);
 }
 
@@ -1753,6 +1760,10 @@ textarea.form-input::-webkit-resizer {
         width: max-content;
         margin: auto;
     }
+    /* Ensure headings and anchor targets are offset from the fixed/absolute navbar on desktop */
+    .article-title {
+        scroll-margin-top: 80px;
+    }
     /**
    * NAVBAR
    */
@@ -1766,6 +1777,10 @@ textarea.form-input::-webkit-resizer {
         border-radius: 0 20px;
         padding: 0 20px;
         box-shadow: none;
+        /* keep the same height and vertical alignment as the base navbar */
+        height: 56px;
+        display: flex;
+        align-items: center;
     }
     .navbar-list {
         gap: 30px;
@@ -1845,7 +1860,8 @@ textarea.form-input::-webkit-resizer {
    * MAIN
    */
     main {
-        max-width: 1200px;
+        /* increased max-width so pages have more horizontal room for the navbar */
+        max-width: 1400px;
         margin-inline: auto;
         display: flex;
         justify-content: center;
@@ -1856,6 +1872,9 @@ textarea.form-input::-webkit-resizer {
         min-width: 75%;
         width: 75%;
         margin: 0;
+    }
+    .article-title {
+        scroll-margin-top: 80px;
     }
     /**
    * SIDEBAR
