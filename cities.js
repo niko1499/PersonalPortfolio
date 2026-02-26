@@ -74,5 +74,10 @@ CITIES = [
     { name: 'San Fransisco', latitude: 37.7749, longitude: -122.4194, radius: 3, fillKey: 'city', date: ' ' },
     { name: 'Seattle', latitude: 47.6061, longitude: -122.3328, radius: 3, fillKey: 'city', date: ' ' },
     { name: 'Vancouver', latitude: 49.2827, longitude: -123.1207, radius: 3, fillKey: 'city', date: ' ' },
+    { name: 'Bern', latitude: 46.9480, longitude: 7.4474, radius: 3, fillKey: 'city', date: ' ' },
+    { name: 'Bergdorf', latitude: 47.05, longitude: 7.61667, radius: 3, fillKey: 'city', date: ' ' },
+    { name: 'Zurich', latitude: 47.3769, longitude: 8.5417, radius: 3, fillKey: 'city', date: ' ' },
+    { name: 'Milan', latitude: 45.4642, longitude: 9.1895, radius: 3, fillKey: 'city', date: ' ' },
+    { name: 'Bogliasco', latitude: 44.3799, longitude: 9.0683, radius: 3, fillKey: 'city', date: ' ' },
 
 ]

@@ -17,6 +17,6 @@ COUNTRIES = {
     BLZ: { fillKey: 'visited' },
     AUT: { fillKey: 'visited' },
     MKD: { fillKey: 'visited' },
-
+    CHE: { fillKey: 'visited' },
 
 }
